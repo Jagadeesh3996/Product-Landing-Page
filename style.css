@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white-color : rgb(255, 255, 255);
+    --black-color : rgb(0, 0, 0);
+    --yellow-color : rgb(240, 240, 0);
+    --red-color : rgb(255, 0, 0);
+    --green-color : rgb(0, 255, 0);
+    --grey-color : rgb(100, 97, 97);
+    --white-yellow-color : linear-gradient(-45deg, #fff, rgb(240, 240, 20));
+}
+a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+body {
+    background-color: var(--black-color);
+}
+
+/* header section */
+.header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    box-shadow: 0 0 15px var(--white-color);
+    font-size: 25px;
+    position: fixed;
+    z-index: 1111;
+}
+.logo, .cart{
+    margin: 50px;
+}
+nav{
+    flex: 1;
+}
+.nav-bar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar li{
+    padding: 0px 30px;
+    font-weight: 600;
+}
+.nav-bar li :hover{
+    color: var(--red-color);
+}
+.cart button{
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    color: var(--white-color);
+    background-color: var(--grey-color);
+    cursor: pointer;
+}
+.cart button :hover{
+    color: var(--green-color);
+}
+
+/* home section */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offer{
+    margin: 5%;
+    margin-left: 20%;
+}
+.offer h1{
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.offer p{
+    padding: 30px 0px;
+    font-size: 20px;
+}
+.form{
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+.form input{
+    font-size: 20px;
+    flex: 1;
+    border: 0;
+    margin-left: 10px;
+}
+.form button{
+    background: var(--red-color);
+    border: 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 0px 10px 10px 0px;
+    color: var(--white-color);
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.product{
+    margin-right: 10%;
+}
+
+/* services setion */
+
+.services{
+    color: var(--white-color);
+    text-align: center;
+    padding-top: 10%;
+    width: 100%;
+}
+.services h1{
+    font-size: 40px;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin-top: 80px;
+}
+.ser-box{
+    width: 100%;
+    box-shadow: 0 0 25px var(--white-color);
+    margin: 50px;
+    transition: transform 0.8s;
+}
+.ser-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: -70px auto 0;
+    background: var(--black-color);
+    border: 18px solid var(--yellow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+.ser-box:hover {
+    transform: translateY(-40px);
+}
+.ser-box h4 {
+    height: 35px;
+    width: 80%;
+    margin: 50px auto;
+    font-size: 20px;
+    background: var(--grey-color);
+    padding: 5px;
+    position: relative;
+}
+.ser-box h4::after,
+.ser-box h4::before {
+    content: '';
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+    background: var(--white-yellow-color);
+}
+.ser-box h4::after {
+    right: -5px;
+    top: -5px;
+}
+.ser-box h4::before {
+    left: -5px;
+    bottom: -5px;
+}
+.ser-box p{
+    margin: 0px 50px 50px;
+    font-size: 30px;
+}
+
+/* how-it-works section */
+
+.how-it-works {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video{
+    width: 760px;
+    height: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+   
+    /* header section */
+
+    .header{
+        font-size: 20px;
+        height: 8%;
+    }
+    .nav-bar li{
+        padding: 0px 15px;
+    }
+    .cart button{
+        font-size: 25px;
+        width: 40px;
+        height: 40px;    
+    }
+
+    /* home section */
+
+    .home{
+        flex-direction: column;
+        padding-top: 20%;
+    }
+    .offer{
+        margin: 0 20%;
+    }
+    .product{
+        margin: 0 10%;
+    }
+
+    /* services setion */
+
+    .container{
+        flex-direction: column;
+        margin: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* how-it-works section */
+
+    .video{
+        width: 560px;
+        height: 315px;
+    }
+
+  }
